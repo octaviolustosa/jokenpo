@@ -1,16 +1,51 @@
-# This is a sample Python script.
+from random import randint
+from time import sleep
+itens = ('Pedra', 'Papel', 'Tesoura')
+computador = randint(0, 2)
+print("""SUAS OPÇÕES:
+[0] PEDRA
+[1] PAPEL
+[2] TESOURA""")
+jogador = int(input('Qual é a sua jogada? '))
+print('JO')
+sleep(0.7)
+print('KEN')
+sleep(0.7)
+print('PO')
+sleep(0.7)
+print('-=' * 10)
+print('Computador escolheu =  {}'.format(itens[computador]))
+print('Jogador escolheu = {}'.format(itens[jogador]))
+print('-=' * 10)
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+if computador == 0:  #computador jogou pedra
+    if jogador == 0:
+        print('EMPATE')
 
+    elif jogador == 1:
+        print('JOGADOR VENCEU')
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+    elif jogador == 2:
+        print('COMPUTADOR VENCEU')
+    else:
+        print('JOGADA INVÁLIDA')
+elif computador == 1: #computador jogou papel
+    if jogador == 0:
+        print('COMPUTADOR VENCEU')
+    elif jogador == 1:
+        print('EMPATE')
+    elif jogador == 2:
+        print('JOGADOR VENCEU')
+    else:
+        print('JOGADA INVÁLIDA')
+elif computador == 2: #computador jogou tesoura
+    if jogador == 0:
+        print('JOGADOR VENCEU')
 
+    elif jogador == 1:
+        print('COMPUTADOR VENCEU')
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    elif jogador == 2:
+        print('EMPATE')
+    else:
+        print('JOGADA INVÁLIDA')
